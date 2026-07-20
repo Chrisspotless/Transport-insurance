@@ -182,3 +182,16 @@
     border-right-color: var(--border);
   }
 }
+
+/* FAQ accordion — max-height animation (Tailwind cannot animate dynamic max-height natively) */
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #111;
+  border-radius: 0 0 4px 4px;
+}
+
+.faq-answer-wrapper--open {
+  max-height: 400px;
+}
